@@ -14,15 +14,17 @@ def return_home():
 #sends in a post request and recieves whatever value is passed in by the frontend
 
 @app.route('/api/get',methods=["POST"])
-def take_val():
+def take_prefs():
     data = request.json
-    value = data.get('value')
-    print(value)
-    return jsonify({
-        'reciveed' : value
-    })
-#todo: make two different tables, one for jobs and one for users
-#todo: put this value {recieved as a list}in postgres database of user preferences
+    preferences = data.get('preferences',[])#extract the preferences in a list
+    
+    #TODO : store in postgres here
+
+    return jsonify({"message": "recieved prefs"})
+
+#TODO: make two different tables, one for jobs and one for users
+#TODO: put this value {recieved as a list}in postgres database of user preferences
+#TODO: process this value against the jobs database and return most relevant jobs
 
    
 
