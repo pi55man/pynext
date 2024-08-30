@@ -18,7 +18,7 @@ def take_prefs():
     data = request.json
     preferences = data.get('preferences',[])#extract the preferences in a list
     
-    #TODO : store in postgres here
+    #TODO : store in postgres here, with user name, password and stuff
 
     return jsonify({"message": "recieved prefs"})
 
