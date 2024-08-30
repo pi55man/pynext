@@ -12,7 +12,12 @@ function index(){
       setMessage(data.message)
     });
   },[]);
+
 //send a post request to this server and the backend fetches it
+//todo: take in a list of user prefs 
+//(like hourly rate, preferred programming language, skills, and whatever stuff is on a freelancing website)
+//and send post req to this url
+
 const send = () =>{
 fetch("http://localhost:8080/api/get",{
 

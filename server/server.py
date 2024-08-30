@@ -5,11 +5,13 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+
 @app.route('/api/home',methods = ['GET'])
 def return_home():
     return jsonify({
         'message': 'hello lolz'
     })
+#sends in a post request and recieves whatever value is passed in by the frontend
 
 @app.route('/api/get',methods=["POST"])
 def take_val():
@@ -19,7 +21,8 @@ def take_val():
     return jsonify({
         'reciveed' : value
     })
-
+#todo: make two different tables, one for jobs and one for users
+#todo: put this value {recieved as a list}in postgres database of user preferences
 
    
 
