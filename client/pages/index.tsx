@@ -12,7 +12,7 @@ function index(){
       setMessage(data.message)
     });
   },[]);
-
+//send a post request to this server and the backend fetches it
 const send = () =>{
 fetch("http://localhost:8080/api/get",{
 
@@ -28,6 +28,7 @@ fetch("http://localhost:8080/api/get",{
 }
 
 return (
+  //testing
 <div>
   <div>{message}</div>
 <input type = "text" value = {inputValue} onChange={(e) => setInputValue(e.target.value)}></input>
